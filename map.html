@@ -17,7 +17,7 @@
             margin: 0;
         }
         </style>
-        <title>Voorziening en Ouderen | DataFryslân | Thuswenjende Âlderen</title>
+        <title></title>
     </head>
     <body>
         <div id="map">
@@ -47,7 +47,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:19, minZoom:10
-        }).fitBounds([[53.16187827972066,5.70667634977069],[53.24623864892232,5.862016619647654]]);
+        }).fitBounds([[52.92053509899329,5.412869240908228],[53.364551515645196,6.28328487314395]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -66,7 +66,6 @@
             maxNativeZoom: 22
         });
         layer_GoogleSatellite_0;
-        map.addLayer(layer_GoogleSatellite_0);
         map.createPane('pane_CartoLight_1');
         map.getPane('pane_CartoLight_1').style.zIndex = 401;
         var layer_CartoLight_1 = L.tileLayer('https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.pn', {
@@ -270,7 +269,6 @@
             style: style_SESwijkFRL_3_0,
         });
         bounds_group.addLayer(layer_SESwijkFRL_3);
-        map.addLayer(layer_SESwijkFRL_3);
         function pop_Aantalvoorzieningen_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -340,7 +338,6 @@
             style: style_Aantalvoorzieningen_4_0,
         });
         bounds_group.addLayer(layer_Aantalvoorzieningen_4);
-        map.addLayer(layer_Aantalvoorzieningen_4);
         function pop_PatientenWijkverplegingperbuurt_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -489,7 +486,6 @@
             },
         });
         bounds_group.addLayer(layer_PatientenWijkverplegingperbuurt_5);
-        map.addLayer(layer_PatientenWijkverplegingperbuurt_5);
         function pop_Huisartsen_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -600,7 +596,6 @@
             },
         });
         bounds_group.addLayer(layer_Huisartsen_6);
-        map.addLayer(layer_Huisartsen_6);
         function pop_Apotheken_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -676,7 +671,7 @@
         function style_Apotheken_7_0() {
             return {
                 pane: 'pane_Apotheken_7',
-                radius: 8.8,
+                radius: 8.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -708,7 +703,6 @@
             },
         });
         bounds_group.addLayer(layer_Apotheken_7);
-        map.addLayer(layer_Apotheken_7);
         function pop_Supermarkten_8(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1089,7 +1083,6 @@
             },
         });
         bounds_group.addLayer(layer_Supermarkten_8);
-        map.addLayer(layer_Supermarkten_8);
         function pop_Buurtcentra_9(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1297,7 +1290,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,255,66,1.0)',
+                fillColor: 'rgba(170,0,200,1.0)',
                 interactive: true,
             }
         }
@@ -1320,7 +1313,6 @@
             },
         });
         bounds_group.addLayer(layer_Buurtcentra_9);
-        map.addLayer(layer_Buurtcentra_9);
         function pop_Verzorgingshuizen_10(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1395,14 +1387,14 @@
                 pane: 'pane_Verzorgingshuizen_10',
                 radius: 16.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(186,186,186,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 4.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(72,123,182,1.0)',
+                fillColor: 'rgba(226,226,0,1.0)',
                 interactive: true,
             }
         }
@@ -1425,7 +1417,6 @@
             },
         });
         bounds_group.addLayer(layer_Verzorgingshuizen_10);
-        map.addLayer(layer_Verzorgingshuizen_10);
         function pop_Gecombineerdeverpleeginrichtingen_11(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1500,14 +1491,14 @@
                 pane: 'pane_Gecombineerdeverpleeginrichtingen_11',
                 radius: 16.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(186,186,186,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 4.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(84,176,74,1.0)',
+                fillColor: 'rgba(255,127,0,1.0)',
                 interactive: true,
             }
         }
@@ -1530,7 +1521,6 @@
             },
         });
         bounds_group.addLayer(layer_Gecombineerdeverpleeginrichtingen_11);
-        map.addLayer(layer_Gecombineerdeverpleeginrichtingen_11);
         function pop_Ziekenhuizen_12(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1605,14 +1595,14 @@
                 pane: 'pane_Ziekenhuizen_12',
                 radius: 16.0,
                 opacity: 1,
-                color: 'rgba(255,255,255,1.0)',
+                color: 'rgba(186,186,186,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 4.0,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(219,30,42,1.0)',
+                fillColor: 'rgba(214,0,1,1.0)',
                 interactive: true,
             }
         }
@@ -1635,7 +1625,6 @@
             },
         });
         bounds_group.addLayer(layer_Ziekenhuizen_12);
-        map.addLayer(layer_Ziekenhuizen_12);
         function pop_Friesland_Buurten_2020_13(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1677,17 +1666,6 @@
             style: style_Friesland_Buurten_2020_13_0,
         });
         bounds_group.addLayer(layer_Friesland_Buurten_2020_13);
-        map.addLayer(layer_Friesland_Buurten_2020_13);
-            var title = new L.Control();
-            title.onAdd = function (map) {
-                this._div = L.DomUtil.create('div', 'info');
-                this.update();
-                return this._div;
-            };
-            title.update = function () {
-                this._div.innerHTML = '<h2>Voorziening en Ouderen | DataFryslân | Thuswenjende Âlderen</h2>';
-            };
-            title.addTo(map);
             var abstract = new L.Control({'position':'bottomleft'});
             abstract.onAdd = function (map) {
                 this._div = L.DomUtil.create('div',
@@ -1706,7 +1684,7 @@
                 abstract.show = function () {
                     this._div.classList.remove("abstract");
                     this._div.classList.add("abstractUncollapsed");
-                    this._div.innerHTML = 'Als onderdeel van het /HUB Thuswenjende Âlderen is deze interactieve webkaart opgeleverd. Hieronder volgt een korte uitleg over het gebruik van deze kaart. <br /><br />Met het plusje en minnetje linksboven kun je in- en uitzoomen. Dit kun je ook doen met het scrol-wiel van je muis. Ook kun je zoeken naar een specifieke locatie op de kaart middels het zoek-icoontje. <br /><br />Het handigste navigeer door even uit te zoomen (met het muiswieltje) en vervolgens met de linkermuisknop ingedrukt over de kaart te bewegen naar de locatie van je interesse. Aan de rechterkant zie je alle beschikbare lagen. <br /><br />Standaard staan alle lagen aangevinkt. Het is echter handig om te beginnen met een lege kaart door alle lagen uit te vinken.  Hieronder volgt een korte uitleg van de verschillende lagen (van beneden naar boven). <br /><br />Google Satelite: dit is een onderlaag die iedereen wel kent van Google Maps. Het geeft een natuurgetrouwe weergave van het gebied. Deze laag is handig om je te oriënteren. <br /><br />Carto Light: dit een lichte, gestileerde kaart. Deze is handig om te gebruiken als onderlaag omdat deze minder afleidt en rustiger is dan de Google Satelite laag. <br /><br />Spreiding 65plus: dit geeft aan hoeveel ouderen van 65 jaar en ouder er wonen in een vakje van 100 bij 100 meter. Let op: het kan even duren voordat de gegevens getoond worden of verdwijnen in verband met de hoeveelheid (bron: CBS).<br /><br />SES-wijk FRL: hier zie je de SES-score per wijk (bron en voor meer info: CBS).<br /><br />Aantal voorzieningen: de groen gekleurde vlekken staan voor gebieden waar binnen 500 meter lopen belangrijke voorzieningen zijn. Het gaat om de volgende voorzieningen: huisartsen, supermarkten en apotheken. Uit onderzoek blijkt dat dit typische voorzieningen zijn die relevant zijn voor ouderen. De voorzieningen kunnen ook apart per locatie worden weergegeven, zie boven in de legenda. <br /><br />Patiënten Wijkverpleging per buurt: dit geeft weer hoeveel patiënten er per CBS-buurt gebruik maken van wijkverpleging (bron: VEKTIS).<br /><br />Huisarten en Apotheken: locatie van huisarten en apotheken (bron: VEKTIS).<br /><br />Supermarkten: locatie van Supermarkten (bron: OpenStreetMap).<br /><br />Buurtcentra: locatie van buurtcentra (bron: OpenStreetMap, niet volledig).<br /><br />Verzorgingshuizen: locatie van verzorgingshuizen (bron: VEKTIS, let op: verzorgingshuizen zijn als locatie aanwezig, echter formeel bestaan ze niet meer).<br /><br />Gecombineerde verpleeginrichtingen: locaties van gecombineerde verpleeginrichtingen (bron: VEKTIS).<br /><br />Ziekenhuizen: locaties van ziekenhuizen (bron: VEKTIS).<br /><br />Friesland Buurten: deze laag kun je gebruiken voor oriëntatie. Het geeft de indeling in buurten weer. ';
+                    this._div.innerHTML = '<br />Ouderen wonen steeds langer thuis, maar waar wonen deze ouderen? Zijn er wel voldoende primaire voorzieningen (supermarkten, huisarts of apotheek) in de buurt? Waar en door wie wordt zorg geleverd – door bijvoorbeeld aan ziekenhuizen, verpleegtehuizen of buurtcentra – voor de thuiswonende ouderen? Het antwoord op bovengenoemde drie vragen is hieronder zichtbaar in een interactieve kaart. De kaart bevat diverse lagen die apart of gelijker tijd bekeken kunnen worden. DataFryslân heeft diverse databronnen voor het eerst bijgebracht voor een integraal beeld van thuiswonende ouderen, voorzieningen in de buurt en of zorg dichtbij of veraf is. Deze kaart informeert stakeholders over de wie, wat en waar vraag ten aanzien van thuiswonende ouderen. <br /> <br /><br />In de kaart staan standaard alle lagen aangevinkt. Het is handig om te beginnen met een lege kaart door alle lagen uit te vinken. Met het plusje en minnetje linksboven kun je in- en uitzoomen. Dit kun je ook doen met het scrol-wiel van je muis. Ook kun je zoeken naar een specifieke locatie op de kaart via het zoek-icoontje.  <br /> <br />Het handigste navigeer door even uit te zoomen (met het muiswieltje) en vervolgens met de linkermuisknop ingedrukt over de kaart te bewegen naar de locatie van je interesse. Aan de rechterkant zie je alle beschikbare lagen. Hieronder volgt een korte uitleg van de verschillende lagen en gebruikte databronnen (van beneden naar boven). <br /> <br />Google Satelite: dit is een onderlaag die iedereen wel kent van Google Maps. Het geeft een natuurgetrouwe weergave van het gebied. Deze laag is handig om je te oriënteren. <br />Carto Light: dit een lichte, gestileerde kaart. Deze is handig om te gebruiken als onderlaag omdat deze minder afleidt en rustiger is dan de Google Satelite laag. <br />Spreiding 65plus: dit geeft aan hoeveel ouderen van 65 jaar en ouder er wonen in een vakje van 100 bij 100 meter. Let op: het kan even duren voordat de gegevens getoond worden of verdwijnen in verband met de hoeveelheid. Data CBS. <br />SES-wijk FRL: hier zie je de SES-score per wijk. Meer informatie over de SES-scores vind je op de website van het CBS. <br />Aantal voorzieningen: de groen gekleurde vlekken staan voor gebieden waar binnen 500 meter lopen belangrijke voorzieningen zijn. Voor meer informatie over hoe ver mensen bereid zijn te lopen zie crow.nl en dan loopafstanden. Het gaat om de volgende voorzieningen: huisartsen, supermarkten en apotheken. Uit onderzoek blijkt dat dit typische voorzieningen zijn die relevant zijn voor ouderen. Voor meer informatie hierover kijk op de website van het FSP (senioren en voorzieningen). De voorzieningen kunnen ook apart per locatie worden weergegeven, zie boven in de legenda. <br />Patiënten Wijkverpleging per buurt: dit geeft weer hoeveel patiënten er per CBS-buurt gebruik maken van wijkverpleging. <br />Friesland Buurten: deze laag geeft de indeling op basis van CBS-buurt codering weer. <br /> <br />Een aantal kaartlagen bevat ook detailinformatie. Hiervoor is het nodig dat de laag waar je informatie voor wilt de ‘bovenste’ laag is die is aangevinkt. Als je bijvoorbeeld de SES-scores wilt zien moet je alle lagen daarboven uitvinken. Als je dan op een wijk klikt krijg je de scores te zien. ';
             };
             abstract.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({
