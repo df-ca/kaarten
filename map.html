@@ -49,7 +49,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:19, minZoom:10
-        }).fitBounds([[52.61935326822537,4.673768388840383],[53.75959884892976,6.533419260431908]]);
+        }).fitBounds([[52.7925909180298,5.044637181661168],[53.52396011600678,6.475422957252505]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -491,746 +491,114 @@
         function pop_Dementieperwijk_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Wijknaam</th>\
+                        <td>' + (feature.properties['wijknaam'] !== null ? autolinker.link(feature.properties['wijknaam'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['wijkcode'] !== null ? autolinker.link(feature.properties['wijkcode'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Gemeentenaam</th>\
+                        <td>' + (feature.properties['gemeentenaam'] !== null ? autolinker.link(feature.properties['gemeentenaam'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['wijknaam'] !== null ? autolinker.link(feature.properties['wijknaam'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">aantalInwoners</th>\
+                        <td>' + (feature.properties['aantalInwoners'] !== null ? autolinker.link(feature.properties['aantalInwoners'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['gemeentecode'] !== null ? autolinker.link(feature.properties['gemeentecode'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">percentagePersonen15Tot25Jaar</th>\
+                        <td>' + (feature.properties['percentagePersonen15Tot25Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen15Tot25Jaar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['gemeentenaam'] !== null ? autolinker.link(feature.properties['gemeentenaam'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">percentagePersonen25Tot45Jaar</th>\
+                        <td>' + (feature.properties['percentagePersonen25Tot45Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen25Tot45Jaar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['indelingswijzigingWijkenEnBuurten'] !== null ? autolinker.link(feature.properties['indelingswijzigingWijkenEnBuurten'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">percentagePersonen45Tot65Jaar</th>\
+                        <td>' + (feature.properties['percentagePersonen45Tot65Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen45Tot65Jaar'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['water'] !== null ? autolinker.link(feature.properties['water'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">percentagePersonen65JaarEnOuder</th>\
+                        <td>' + (feature.properties['percentagePersonen65JaarEnOuder'] !== null ? autolinker.link(feature.properties['percentagePersonen65JaarEnOuder'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['omgevingsadressendichtheid'] !== null ? autolinker.link(feature.properties['omgevingsadressendichtheid'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Aantal personen met dementie</th>\
+                        <td>' + (feature.properties['dAantal personen met dementie'] !== null ? autolinker.link(feature.properties['dAantal personen met dementie'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['stedelijkheidAdressenPerKm2'] !== null ? autolinker.link(feature.properties['stedelijkheidAdressenPerKm2'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bevolkingsdichtheidInwonersPerKm2'] !== null ? autolinker.link(feature.properties['bevolkingsdichtheidInwonersPerKm2'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalInwoners'] !== null ? autolinker.link(feature.properties['aantalInwoners'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mannen'] !== null ? autolinker.link(feature.properties['mannen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vrouwen'] !== null ? autolinker.link(feature.properties['vrouwen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonen0Tot15Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen0Tot15Jaar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonen15Tot25Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen15Tot25Jaar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonen25Tot45Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen25Tot45Jaar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonen45Tot65Jaar'] !== null ? autolinker.link(feature.properties['percentagePersonen45Tot65Jaar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonen65JaarEnOuder'] !== null ? autolinker.link(feature.properties['percentagePersonen65JaarEnOuder'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageOngehuwd'] !== null ? autolinker.link(feature.properties['percentageOngehuwd'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageGehuwd'] !== null ? autolinker.link(feature.properties['percentageGehuwd'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageGescheid'] !== null ? autolinker.link(feature.properties['percentageGescheid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageVerweduwd'] !== null ? autolinker.link(feature.properties['percentageVerweduwd'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['geboorteTotaal'] !== null ? autolinker.link(feature.properties['geboorteTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['geboortesPer1000Inwoners'] !== null ? autolinker.link(feature.properties['geboortesPer1000Inwoners'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sterfteTotaal'] !== null ? autolinker.link(feature.properties['sterfteTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['sterfteRelatief'] !== null ? autolinker.link(feature.properties['sterfteRelatief'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalHuishoudens'] !== null ? autolinker.link(feature.properties['aantalHuishoudens'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageEenpersoonshuishoudens'] !== null ? autolinker.link(feature.properties['percentageEenpersoonshuishoudens'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensZonderKinderen'] !== null ? autolinker.link(feature.properties['percentageHuishoudensZonderKinderen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensMetKinderen'] !== null ? autolinker.link(feature.properties['percentageHuishoudensMetKinderen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldeHuishoudsgrootte'] !== null ? autolinker.link(feature.properties['gemiddeldeHuishoudsgrootte'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageWesterseMigratieachtergrond'] !== null ? autolinker.link(feature.properties['percentageWesterseMigratieachtergrond'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageNietWesterseMigratieachtergrond'] !== null ? autolinker.link(feature.properties['percentageNietWesterseMigratieachtergrond'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageUitMarokko'] !== null ? autolinker.link(feature.properties['percentageUitMarokko'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageUitNederlandseAntillenEnAruba'] !== null ? autolinker.link(feature.properties['percentageUitNederlandseAntillenEnAruba'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageUitSuriname'] !== null ? autolinker.link(feature.properties['percentageUitSuriname'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageUitTurkije'] !== null ? autolinker.link(feature.properties['percentageUitTurkije'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageOverigeNietwestersemigratieachtergrond'] !== null ? autolinker.link(feature.properties['percentageOverigeNietwestersemigratieachtergrond'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenLandbouwBosbouwVisserij'] !== null ? autolinker.link(feature.properties['aantalBedrijvenLandbouwBosbouwVisserij'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenNijverheidEnergie'] !== null ? autolinker.link(feature.properties['aantalBedrijvenNijverheidEnergie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenHandelEnHoreca'] !== null ? autolinker.link(feature.properties['aantalBedrijvenHandelEnHoreca'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenVervoerInformatieCommunicatie'] !== null ? autolinker.link(feature.properties['aantalBedrijvenVervoerInformatieCommunicatie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenFinancieelOnroerendGoed'] !== null ? autolinker.link(feature.properties['aantalBedrijvenFinancieelOnroerendGoed'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenZakelijkeDienstverlening'] !== null ? autolinker.link(feature.properties['aantalBedrijvenZakelijkeDienstverlening'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenOverheidOnderwijsEnZorg'] !== null ? autolinker.link(feature.properties['aantalBedrijvenOverheidOnderwijsEnZorg'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijvenCultuurRecreatieOverige'] !== null ? autolinker.link(feature.properties['aantalBedrijvenCultuurRecreatieOverige'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalBedrijfsvestigingen'] !== null ? autolinker.link(feature.properties['aantalBedrijfsvestigingen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['woningvoorraad'] !== null ? autolinker.link(feature.properties['woningvoorraad'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldeWoningwaarde'] !== null ? autolinker.link(feature.properties['gemiddeldeWoningwaarde'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageEengezinswoning'] !== null ? autolinker.link(feature.properties['percentageEengezinswoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageMeergezinswoning'] !== null ? autolinker.link(feature.properties['percentageMeergezinswoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageBewoond'] !== null ? autolinker.link(feature.properties['percentageBewoond'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageKoopwoningen'] !== null ? autolinker.link(feature.properties['percentageKoopwoningen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuurwoningen'] !== null ? autolinker.link(feature.properties['percentageHuurwoningen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percHuurwoningenInBezitWoningcorporaties'] !== null ? autolinker.link(feature.properties['percHuurwoningenInBezitWoningcorporaties'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percHuurwoningenInBezitOverigeVerhuurders'] !== null ? autolinker.link(feature.properties['percHuurwoningenInBezitOverigeVerhuurders'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageWoningenMetEigendomOnbekend'] !== null ? autolinker.link(feature.properties['percentageWoningenMetEigendomOnbekend'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageBouwjaarklasseTot2000'] !== null ? autolinker.link(feature.properties['percentageBouwjaarklasseTot2000'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageBouwjaarklasseVanaf2000'] !== null ? autolinker.link(feature.properties['percentageBouwjaarklasseVanaf2000'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageLeegstandWoningen'] !== null ? autolinker.link(feature.properties['percentageLeegstandWoningen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikTotaal'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikAppartement'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikAppartement'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikTussenwoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikTussenwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikHoekwoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikHoekwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruik2Onder1KapWoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruik2Onder1KapWoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikVrijstaandeWoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikVrijstaandeWoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikHuurwoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikHuurwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGasverbruikkoopwoning'] !== null ? autolinker.link(feature.properties['gemiddeldGasverbruikkoopwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikTotaal'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikAppartement'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikAppartement'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikTussenwoning'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikTussenwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikHoekwoning'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikHoekwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemElektriciteitsverbruik2Onder1KapWoning'] !== null ? autolinker.link(feature.properties['gemElektriciteitsverbruik2Onder1KapWoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemElektriciteitsverbruikVrijstaandeWoning'] !== null ? autolinker.link(feature.properties['gemElektriciteitsverbruikVrijstaandeWoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikHuurwoning'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikHuurwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldElektriciteitsverbruikkoopwoning'] !== null ? autolinker.link(feature.properties['gemiddeldElektriciteitsverbruikkoopwoning'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['opleidingsniveauHoog'] !== null ? autolinker.link(feature.properties['opleidingsniveauHoog'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['opleidingsniveauMiddelbaar'] !== null ? autolinker.link(feature.properties['opleidingsniveauMiddelbaar'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['opleidingsniveauLaag'] !== null ? autolinker.link(feature.properties['opleidingsniveauLaag'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['nettoArbeidsparticipatie'] !== null ? autolinker.link(feature.properties['nettoArbeidsparticipatie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageWerknemers'] !== null ? autolinker.link(feature.properties['percentageWerknemers'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageZelfstandigen'] !== null ? autolinker.link(feature.properties['percentageZelfstandigen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalInkomensontvangers'] !== null ? autolinker.link(feature.properties['aantalInkomensontvangers'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldInkomenPerInkomensontvanger'] !== null ? autolinker.link(feature.properties['gemiddeldInkomenPerInkomensontvanger'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldInkomenPerInwoner'] !== null ? autolinker.link(feature.properties['gemiddeldInkomenPerInwoner'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonenMetLaagInkomen'] !== null ? autolinker.link(feature.properties['percentagePersonenMetLaagInkomen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentagePersonenMetHoogInkomen'] !== null ? autolinker.link(feature.properties['percentagePersonenMetHoogInkomen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensMetLaagInkomen'] !== null ? autolinker.link(feature.properties['percentageHuishoudensMetLaagInkomen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensMetHoogInkomen'] !== null ? autolinker.link(feature.properties['percentageHuishoudensMetHoogInkomen'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensOnderOfRondSociaalMinimum'] !== null ? autolinker.link(feature.properties['percentageHuishoudensOnderOfRondSociaalMinimum'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageHuishoudensMetLageKoopkracht'] !== null ? autolinker.link(feature.properties['percentageHuishoudensMetLageKoopkracht'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenMetEenAoUitkeringTotaal'] !== null ? autolinker.link(feature.properties['aantalPersonenMetEenAoUitkeringTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenMetEenWwUitkeringTotaal'] !== null ? autolinker.link(feature.properties['aantalPersonenMetEenWwUitkeringTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenMetEenAlgBijstandsuitkeringTot'] !== null ? autolinker.link(feature.properties['aantalPersonenMetEenAlgBijstandsuitkeringTot'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenMetEenAowUitkeringTotaal'] !== null ? autolinker.link(feature.properties['aantalPersonenMetEenAowUitkeringTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldGestandaardiseerdInkomenVanHuishoudens'] !== null ? autolinker.link(feature.properties['gemiddeldGestandaardiseerdInkomenVanHuishoudens'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huishoudensTot110PercentVanSociaalMinimum'] !== null ? autolinker.link(feature.properties['huishoudensTot110PercentVanSociaalMinimum'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huishoudensTot120PercentVanSociaalMinimum'] !== null ? autolinker.link(feature.properties['huishoudensTot120PercentVanSociaalMinimum'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['mediaanVermogenVanParticuliereHuish'] !== null ? autolinker.link(feature.properties['mediaanVermogenVanParticuliereHuish'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalJongerenMetJeugdzorgInNatura'] !== null ? autolinker.link(feature.properties['aantalJongerenMetJeugdzorgInNatura'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['percentageJongerenMetJeugdzorgInNatura'] !== null ? autolinker.link(feature.properties['percentageJongerenMetJeugdzorgInNatura'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['personenautosTotaal'] !== null ? autolinker.link(feature.properties['personenautosTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['personenautosPerHuishouden'] !== null ? autolinker.link(feature.properties['personenautosPerHuishouden'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['personenautosPerKm2'] !== null ? autolinker.link(feature.properties['personenautosPerKm2'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['motortweewielersTotaal'] !== null ? autolinker.link(feature.properties['motortweewielersTotaal'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenautosMetBrandstofBenzine'] !== null ? autolinker.link(feature.properties['aantalPersonenautosMetBrandstofBenzine'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['aantalPersonenautosMetOverigeBrandstof'] !== null ? autolinker.link(feature.properties['aantalPersonenautosMetOverigeBrandstof'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['oppervlakteTotaalInHa'] !== null ? autolinker.link(feature.properties['oppervlakteTotaalInHa'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['oppervlakteLandInHa'] !== null ? autolinker.link(feature.properties['oppervlakteLandInHa'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['oppervlakteWaterInHa'] !== null ? autolinker.link(feature.properties['oppervlakteWaterInHa'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huisartsenpraktijkGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['huisartsenpraktijkGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huisartsenpraktijkGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['huisartsenpraktijkGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huisartsenpraktijkGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['huisartsenpraktijkGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huisartsenpraktijkGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['huisartsenpraktijkGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['huisartsenpostGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['huisartsenpostGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['apotheekGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['apotheekGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisInclBuitenpolikliniekGemAfstInKm'] !== null ? autolinker.link(feature.properties['ziekenhuisInclBuitenpolikliniekGemAfstInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['ziekenhuisInclBuitenpoliGemAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisExclBuitenpolikliniekGemAfstInKm'] !== null ? autolinker.link(feature.properties['ziekenhuisExclBuitenpolikliniekGemAfstInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['ziekenhuisExclBuitenpoliGemAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['groteSupermarktGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['groteSupermarktGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['groteSupermarktGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['groteSupermarktGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['groteSupermarktGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['groteSupermarktGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['groteSupermarktGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['groteSupermarktGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['winkelsOvDagelijkseLevensmGemAfstInKm'] !== null ? autolinker.link(feature.properties['winkelsOvDagelijkseLevensmGemAfstInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['winkelsOvDagelLevensmGemAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['winkelsOvDagelLevensmGemAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['winkelsOvDagelLevensmGemAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['winkelsOvDagelLevensmGemAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['winkelsOvDagelLevensmGemAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['winkelsOvDagelLevensmGemAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['warenhuisGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['warenhuisGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['warenhuisGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['warenhuisGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['warenhuisGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['warenhuisGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['warenhuisGemiddeldAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['warenhuisGemiddeldAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafeGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['cafeGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafeGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['cafeGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafeGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['cafeGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafeGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['cafeGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafetariaGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['cafetariaGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafetariaGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['cafetariaGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafetariaGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['cafetariaGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['cafetariaGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['cafetariaGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['restaurantGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['restaurantGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['restaurantGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['restaurantGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['restaurantGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['restaurantGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['restaurantGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['restaurantGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hotelGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['hotelGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hotelGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['hotelGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hotelGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['hotelGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['hotelGemiddeldAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['hotelGemiddeldAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kinderdagverblijfGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['kinderdagverblijfGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kinderdagverblijfGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['kinderdagverblijfGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kinderdagverblijfGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['kinderdagverblijfGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kinderdagverblijfGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['kinderdagverblijfGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['buitenschoolseOpvangGemAfstandInKm'] !== null ? autolinker.link(feature.properties['buitenschoolseOpvangGemAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['buitenschoolseOpvangGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['basisonderwijsGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['basisonderwijsGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['basisonderwijsGemiddeldAantalBinnen1Km'] !== null ? autolinker.link(feature.properties['basisonderwijsGemiddeldAantalBinnen1Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['basisonderwijsGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['basisonderwijsGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['basisonderwijsGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['basisonderwijsGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['voortgezetOnderwijsGemAfstandInKm'] !== null ? autolinker.link(feature.properties['voortgezetOnderwijsGemAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['voortgezetOnderwijsGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vmboGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['vmboGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vmboGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['vmboGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vmboGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['vmboGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['vmboGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['vmboGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['havoVwoGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['havoVwoGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['havoVwoGemiddeldAantalBinnen3Km'] !== null ? autolinker.link(feature.properties['havoVwoGemiddeldAantalBinnen3Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['havoVwoGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['havoVwoGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['havoVwoGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['havoVwoGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['brandweerkazerneGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['brandweerkazerneGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['opritHoofdverkeerswegGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['opritHoofdverkeerswegGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['treinstationGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['treinstationGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['overstapstationGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['overstapstationGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zwembadGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['zwembadGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['kunstijsbaanGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['kunstijsbaanGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bibliotheekGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['bibliotheekGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['poppodiumGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['poppodiumGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bioscoopGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['bioscoopGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bioscoopGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['bioscoopGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bioscoopGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['bioscoopGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bioscoopGemiddeldAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['bioscoopGemiddeldAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['saunaGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['saunaGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['zonnebankGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['zonnebankGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['attractieparkGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['attractieparkGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['attractieparkGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['attractieparkGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['attractieparkGemiddeldAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['attractieparkGemiddeldAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['attractieparkGemiddeldAantalBinnen50Km'] !== null ? autolinker.link(feature.properties['attractieparkGemiddeldAantalBinnen50Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['theaterGemiddeldeAfstandInKm'] !== null ? autolinker.link(feature.properties['theaterGemiddeldeAfstandInKm'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['theaterGemiddeldAantalBinnen5Km'] !== null ? autolinker.link(feature.properties['theaterGemiddeldAantalBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['theaterGemiddeldAantalBinnen10Km'] !== null ? autolinker.link(feature.properties['theaterGemiddeldAantalBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['theaterGemiddeldAantalBinnen20Km'] !== null ? autolinker.link(feature.properties['theaterGemiddeldAantalBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldeAfstandTotMuseum'] !== null ? autolinker.link(feature.properties['gemiddeldeAfstandTotMuseum'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldAantalMuseaBinnen5Km'] !== null ? autolinker.link(feature.properties['gemiddeldAantalMuseaBinnen5Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldAantalMuseaBinnen10Km'] !== null ? autolinker.link(feature.properties['gemiddeldAantalMuseaBinnen10Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['gemiddeldAantalMuseaBinnen20Km'] !== null ? autolinker.link(feature.properties['gemiddeldAantalMuseaBinnen20Km'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['jrstatcode'] !== null ? autolinker.link(feature.properties['jrstatcode'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fuuid'] !== null ? autolinker.link(feature.properties['fuuid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dCBS-wijknaam'] !== null ? autolinker.link(feature.properties['dCBS-wijknaam'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dGemeente'] !== null ? autolinker.link(feature.properties['dGemeente'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dAantal personen met dementie'] !== null ? autolinker.link(feature.properties['dAantal personen met dementie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dTotale populatie 65+'] !== null ? autolinker.link(feature.properties['dTotale populatie 65+'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['dLeeftijdscategorie'] !== null ? autolinker.link(feature.properties['dLeeftijdscategorie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tCBS-wijknaam'] !== null ? autolinker.link(feature.properties['tCBS-wijknaam'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tGemeente'] !== null ? autolinker.link(feature.properties['tGemeente'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tAantal personen met dementie'] !== null ? autolinker.link(feature.properties['tAantal personen met dementie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tTotale populatie 65+'] !== null ? autolinker.link(feature.properties['tTotale populatie 65+'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tLeeftijdscategorie'] !== null ? autolinker.link(feature.properties['tLeeftijdscategorie'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">Populatie 65+</th>\
+                        <td>' + (feature.properties['dTotale populatie 65+'] !== null ? autolinker.link(feature.properties['dTotale populatie 65+'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
         function style_Dementieperwijk_6_0(feature) {
-            if (feature.properties['tAantal personen met dementie'] >= 10.000000 && feature.properties['tAantal personen met dementie'] <= 15.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 0.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 10.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(247,251,255,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
-            if (feature.properties['tAantal personen met dementie'] >= 15.000000 && feature.properties['tAantal personen met dementie'] <= 20.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 10.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 20.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(209,226,243,1.0)',
-                interactive: false,
+                fillColor: 'rgba(215,230,245,1.0)',
+                interactive: true,
             }
             }
-            if (feature.properties['tAantal personen met dementie'] >= 20.000000 && feature.properties['tAantal personen met dementie'] <= 30.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 20.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 30.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(154,200,224,1.0)',
-                interactive: false,
+                fillColor: 'rgba(175,209,231,1.0)',
+                interactive: true,
             }
             }
-            if (feature.properties['tAantal personen met dementie'] >= 30.000000 && feature.properties['tAantal personen met dementie'] <= 60.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 30.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 40.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(82,157,204,1.0)',
-                interactive: false,
+                fillColor: 'rgba(115,178,216,1.0)',
+                interactive: true,
             }
             }
-            if (feature.properties['tAantal personen met dementie'] >= 60.000000 && feature.properties['tAantal personen met dementie'] <= 120.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 40.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 50.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(29,108,177,1.0)',
-                interactive: false,
+                fillColor: 'rgba(62,142,196,1.0)',
+                interactive: true,
             }
             }
-            if (feature.properties['tAantal personen met dementie'] >= 120.000000 && feature.properties['tAantal personen met dementie'] <= 660.000000 ) {
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 50.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Dementieperwijk_6',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
+                stroke: false, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(22,99,170,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['q2wHide_tAantal personen met dementie'] >= 100.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 660.000000 ) {
+                return {
+                pane: 'pane_Dementieperwijk_6',
+                stroke: false, 
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(8,48,107,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
         }
@@ -1239,18 +607,12 @@
         map.getPane('pane_Dementieperwijk_6').style['mix-blend-mode'] = 'normal';
         var layer_Dementieperwijk_6 = new L.geoJson(json_Dementieperwijk_6, {
             attribution: '',
-            interactive: false,
+            interactive: true,
             dataVar: 'json_Dementieperwijk_6',
             layerName: 'layer_Dementieperwijk_6',
             pane: 'pane_Dementieperwijk_6',
             onEachFeature: pop_Dementieperwijk_6,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Dementieperwijk_6_0(feature));
-            },
+            style: style_Dementieperwijk_6_0,
         });
         bounds_group.addLayer(layer_Dementieperwijk_6);
         function pop_Huisartsen_7(feature, layer) {
@@ -2554,7 +1916,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Ziekenhuizen_15.png" /> Ziekenhuizen': layer_Ziekenhuizen_15,'<img src="legend/Gecombineerdeverpleeginrichtingen_14.png" /> Gecombineerde verpleeginrichtingen': layer_Gecombineerdeverpleeginrichtingen_14,'<img src="legend/Verzorgingshuizen_13.png" /> Verzorgingshuizen': layer_Verzorgingshuizen_13,'<img src="legend/OverigezorgverlenersVektis_12.png" /> Overige zorgverleners (Vektis)': layer_OverigezorgverlenersVektis_12,'<img src="legend/MaatschappelijkVastgoedNEFRL_11.png" /> Maatschappelijk Vastgoed NE-FRL': layer_MaatschappelijkVastgoedNEFRL_11,'<img src="legend/Buurtcentranietcompleet_10.png" /> Buurtcentra (niet compleet)': layer_Buurtcentranietcompleet_10,'<img src="legend/Supermarkten_9.png" /> Supermarkten': layer_Supermarkten_9,'<img src="legend/Apotheken_8.png" /> Apotheken': layer_Apotheken_8,'<img src="legend/Huisartsen_7.png" /> Huisartsen': layer_Huisartsen_7,'Dementie per wijk<br /><table><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_10150.png" /></td><td>10 - 15</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_15201.png" /></td><td>15 - 20</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_20302.png" /></td><td>20 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_30603.png" /></td><td>30 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_601204.png" /></td><td>60 - 120</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_1206605.png" /></td><td>120 - 660</td></tr></table>': layer_Dementieperwijk_6,'Patienten Wijkverpleging per buurt<br /><table><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1321.png" /></td><td>1 - 32</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_32732.png" /></td><td>32 - 73</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_731343.png" /></td><td>73 - 134</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1341954.png" /></td><td>134 - 195</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1952665.png" /></td><td>195 - 266</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_2663926.png" /></td><td>266 - 392</td></tr></table>': layer_PatientenWijkverplegingperbuurt_5,'Aantal voorzieningen<br /><table><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_32.png" /></td><td>3</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_3.png" /></td><td></td></tr></table>': layer_Aantalvoorzieningen_4,'SES-wijk FRL<br /><table><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_106801370.png" /></td><td>-1,068 - -0,137</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_013701.png" /></td><td>-0,137 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_002.png" /></td><td>0 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_000423.png" /></td><td>0 - 0,042</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_004201924.png" /></td><td>0,042 - 0,192</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_019203355.png" /></td><td>0,192 - 0,335</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_033507616.png" /></td><td>0,335 - 0,761</td></tr></table>': layer_SESwijkFRL_3,'Spreiding 65plus<br /><table><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_020.png" /></td><td>0 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_251.png" /></td><td>2 - 5</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_5102.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_10253.png" /></td><td>10 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_25604.png" /></td><td>25 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_601205.png" /></td><td>60 - 120</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_1203306.png" /></td><td>120 - 330</td></tr></table>': layer_Spreiding65plus_2,"Carto Light": layer_CartoLight_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Ziekenhuizen_15.png" /> Ziekenhuizen': layer_Ziekenhuizen_15,'<img src="legend/Gecombineerdeverpleeginrichtingen_14.png" /> Gecombineerde verpleeginrichtingen': layer_Gecombineerdeverpleeginrichtingen_14,'<img src="legend/Verzorgingshuizen_13.png" /> Verzorgingshuizen': layer_Verzorgingshuizen_13,'<img src="legend/OverigezorgverlenersVektis_12.png" /> Overige zorgverleners (Vektis)': layer_OverigezorgverlenersVektis_12,'<img src="legend/MaatschappelijkVastgoedNEFRL_11.png" /> Maatschappelijk Vastgoed NE-FRL': layer_MaatschappelijkVastgoedNEFRL_11,'<img src="legend/Buurtcentranietcompleet_10.png" /> Buurtcentra (niet compleet)': layer_Buurtcentranietcompleet_10,'<img src="legend/Supermarkten_9.png" /> Supermarkten': layer_Supermarkten_9,'<img src="legend/Apotheken_8.png" /> Apotheken': layer_Apotheken_8,'<img src="legend/Huisartsen_7.png" /> Huisartsen': layer_Huisartsen_7,'Dementie per wijk<br /><table><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_0100.png" /></td><td>0 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_10201.png" /></td><td>10 - 20</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_20302.png" /></td><td>20 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_30403.png" /></td><td>30 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_40504.png" /></td><td>40 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_501005.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_1006606.png" /></td><td>100 - 660</td></tr></table>': layer_Dementieperwijk_6,'Patienten Wijkverpleging per buurt<br /><table><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1321.png" /></td><td>1 - 32</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_32732.png" /></td><td>32 - 73</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_731343.png" /></td><td>73 - 134</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1341954.png" /></td><td>134 - 195</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1952665.png" /></td><td>195 - 266</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_2663926.png" /></td><td>266 - 392</td></tr></table>': layer_PatientenWijkverplegingperbuurt_5,'Aantal voorzieningen<br /><table><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_32.png" /></td><td>3</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_3.png" /></td><td></td></tr></table>': layer_Aantalvoorzieningen_4,'SES-wijk FRL<br /><table><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_106801370.png" /></td><td>-1,068 - -0,137</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_013701.png" /></td><td>-0,137 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_002.png" /></td><td>0 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_000423.png" /></td><td>0 - 0,042</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_004201924.png" /></td><td>0,042 - 0,192</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_019203355.png" /></td><td>0,192 - 0,335</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_033507616.png" /></td><td>0,335 - 0,761</td></tr></table>': layer_SESwijkFRL_3,'Spreiding 65plus<br /><table><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_020.png" /></td><td>0 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_251.png" /></td><td>2 - 5</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_5102.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_10253.png" /></td><td>10 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_25604.png" /></td><td>25 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_601205.png" /></td><td>60 - 120</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_1203306.png" /></td><td>120 - 330</td></tr></table>': layer_Spreiding65plus_2,"Carto Light": layer_CartoLight_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
         setBounds();
         resetLabels([layer_Spreiding65plus_2]);
         map.on("zoomend", function(){
