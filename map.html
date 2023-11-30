@@ -35,8 +35,8 @@
         <script src="data/Spreiding65plus_2.js"></script>
         <script src="data/SESwijkFRL_3.js"></script>
         <script src="data/Aantalvoorzieningen_4.js"></script>
-        <script src="data/PatientenWijkverplegingperbuurt_5.js"></script>
-        <script src="data/Dementieperwijk_6.js"></script>
+        <script src="data/Dementieperwijk_5.js"></script>
+        <script src="data/PatientenWijkverplegingperbuurt_6.js"></script>
         <script src="data/Huisartsen_7.js"></script>
         <script src="data/Apotheken_8.js"></script>
         <script src="data/Supermarkten_9.js"></script>
@@ -49,7 +49,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:19, minZoom:10
-        }).fitBounds([[52.7925909180298,5.044637181661168],[53.52396011600678,6.475422957252505]]);
+        }).fitBounds([[52.7925909180298,5.164087304303467],[53.5239601160068,6.355972834610214]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -340,155 +340,7 @@
             style: style_Aantalvoorzieningen_4_0,
         });
         bounds_group.addLayer(layer_Aantalvoorzieningen_4);
-        function pop_PatientenWijkverplegingperbuurt_5(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2"><strong>Buurtnaam</strong><br />' + (feature.properties['buurtnaam'] !== null ? autolinker.link(feature.properties['buurtnaam'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>Aantal patienten</strong><br />' + (feature.properties['FAantal patiënten'] !== null ? autolinker.link(feature.properties['FAantal patiënten'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>perc_wijkverpl_buurt</strong><br />' + (feature.properties['perc_wijkverpl_buurt'] !== null ? autolinker.link(feature.properties['perc_wijkverpl_buurt'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_PatientenWijkverplegingperbuurt_5_0(feature) {
-            if (feature.properties['FAantal patiënten'] >= 0.000000 && feature.properties['FAantal patiënten'] <= 1.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(250,250,250,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 1.000000 && feature.properties['FAantal patiënten'] <= 32.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(209,209,209,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 32.000000 && feature.properties['FAantal patiënten'] <= 73.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(168,168,168,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 73.000000 && feature.properties['FAantal patiënten'] <= 134.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(128,128,128,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 134.000000 && feature.properties['FAantal patiënten'] <= 195.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(87,87,87,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 195.000000 && feature.properties['FAantal patiënten'] <= 266.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(46,46,46,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['FAantal patiënten'] >= 266.000000 && feature.properties['FAantal patiënten'] <= 392.000000 ) {
-                return {
-                pane: 'pane_PatientenWijkverplegingperbuurt_5',
-                radius: 8.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(5,5,5,1.0)',
-                interactive: true,
-            }
-            }
-        }
-        map.createPane('pane_PatientenWijkverplegingperbuurt_5');
-        map.getPane('pane_PatientenWijkverplegingperbuurt_5').style.zIndex = 405;
-        map.getPane('pane_PatientenWijkverplegingperbuurt_5').style['mix-blend-mode'] = 'normal';
-        var layer_PatientenWijkverplegingperbuurt_5 = new L.geoJson(json_PatientenWijkverplegingperbuurt_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_PatientenWijkverplegingperbuurt_5',
-            layerName: 'layer_PatientenWijkverplegingperbuurt_5',
-            pane: 'pane_PatientenWijkverplegingperbuurt_5',
-            onEachFeature: pop_PatientenWijkverplegingperbuurt_5,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_PatientenWijkverplegingperbuurt_5_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_PatientenWijkverplegingperbuurt_5);
-        function pop_Dementieperwijk_6(feature, layer) {
+        function pop_Dementieperwijk_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Wijknaam</th>\
@@ -530,10 +382,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_Dementieperwijk_6_0(feature) {
+        function style_Dementieperwijk_5_0(feature) {
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 0.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 10.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -543,7 +395,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 10.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 20.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -553,7 +405,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 20.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 30.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -563,7 +415,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 30.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 40.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -573,7 +425,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 40.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 50.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -583,7 +435,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 50.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 100.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -593,7 +445,7 @@
             }
             if (feature.properties['q2wHide_tAantal personen met dementie'] >= 100.000000 && feature.properties['q2wHide_tAantal personen met dementie'] <= 660.000000 ) {
                 return {
-                pane: 'pane_Dementieperwijk_6',
+                pane: 'pane_Dementieperwijk_5',
                 stroke: false, 
                 fill: true,
                 fillOpacity: 1,
@@ -602,19 +454,167 @@
             }
             }
         }
-        map.createPane('pane_Dementieperwijk_6');
-        map.getPane('pane_Dementieperwijk_6').style.zIndex = 406;
-        map.getPane('pane_Dementieperwijk_6').style['mix-blend-mode'] = 'normal';
-        var layer_Dementieperwijk_6 = new L.geoJson(json_Dementieperwijk_6, {
+        map.createPane('pane_Dementieperwijk_5');
+        map.getPane('pane_Dementieperwijk_5').style.zIndex = 405;
+        map.getPane('pane_Dementieperwijk_5').style['mix-blend-mode'] = 'normal';
+        var layer_Dementieperwijk_5 = new L.geoJson(json_Dementieperwijk_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Dementieperwijk_6',
-            layerName: 'layer_Dementieperwijk_6',
-            pane: 'pane_Dementieperwijk_6',
-            onEachFeature: pop_Dementieperwijk_6,
-            style: style_Dementieperwijk_6_0,
+            dataVar: 'json_Dementieperwijk_5',
+            layerName: 'layer_Dementieperwijk_5',
+            pane: 'pane_Dementieperwijk_5',
+            onEachFeature: pop_Dementieperwijk_5,
+            style: style_Dementieperwijk_5_0,
         });
-        bounds_group.addLayer(layer_Dementieperwijk_6);
+        bounds_group.addLayer(layer_Dementieperwijk_5);
+        function pop_PatientenWijkverplegingperbuurt_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2"><strong>Buurtnaam</strong><br />' + (feature.properties['buurtnaam'] !== null ? autolinker.link(feature.properties['buurtnaam'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Aantal patienten</strong><br />' + (feature.properties['FAantal patiënten'] !== null ? autolinker.link(feature.properties['FAantal patiënten'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>perc_wijkverpl_buurt</strong><br />' + (feature.properties['perc_wijkverpl_buurt'] !== null ? autolinker.link(feature.properties['perc_wijkverpl_buurt'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_PatientenWijkverplegingperbuurt_6_0(feature) {
+            if (feature.properties['FAantal patiënten'] >= 0.000000 && feature.properties['FAantal patiënten'] <= 1.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(250,250,250,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 1.000000 && feature.properties['FAantal patiënten'] <= 32.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(209,209,209,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 32.000000 && feature.properties['FAantal patiënten'] <= 73.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(168,168,168,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 73.000000 && feature.properties['FAantal patiënten'] <= 134.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(128,128,128,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 134.000000 && feature.properties['FAantal patiënten'] <= 195.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(87,87,87,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 195.000000 && feature.properties['FAantal patiënten'] <= 266.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(46,46,46,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['FAantal patiënten'] >= 266.000000 && feature.properties['FAantal patiënten'] <= 392.000000 ) {
+                return {
+                pane: 'pane_PatientenWijkverplegingperbuurt_6',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(5,5,5,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_PatientenWijkverplegingperbuurt_6');
+        map.getPane('pane_PatientenWijkverplegingperbuurt_6').style.zIndex = 406;
+        map.getPane('pane_PatientenWijkverplegingperbuurt_6').style['mix-blend-mode'] = 'normal';
+        var layer_PatientenWijkverplegingperbuurt_6 = new L.geoJson(json_PatientenWijkverplegingperbuurt_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_PatientenWijkverplegingperbuurt_6',
+            layerName: 'layer_PatientenWijkverplegingperbuurt_6',
+            pane: 'pane_PatientenWijkverplegingperbuurt_6',
+            onEachFeature: pop_PatientenWijkverplegingperbuurt_6,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_PatientenWijkverplegingperbuurt_6_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_PatientenWijkverplegingperbuurt_6);
         function pop_Huisartsen_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -1916,7 +1916,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/Ziekenhuizen_15.png" /> Ziekenhuizen': layer_Ziekenhuizen_15,'<img src="legend/Gecombineerdeverpleeginrichtingen_14.png" /> Gecombineerde verpleeginrichtingen': layer_Gecombineerdeverpleeginrichtingen_14,'<img src="legend/Verzorgingshuizen_13.png" /> Verzorgingshuizen': layer_Verzorgingshuizen_13,'<img src="legend/OverigezorgverlenersVektis_12.png" /> Overige zorgverleners (Vektis)': layer_OverigezorgverlenersVektis_12,'<img src="legend/MaatschappelijkVastgoedNEFRL_11.png" /> Maatschappelijk Vastgoed NE-FRL': layer_MaatschappelijkVastgoedNEFRL_11,'<img src="legend/Buurtcentranietcompleet_10.png" /> Buurtcentra (niet compleet)': layer_Buurtcentranietcompleet_10,'<img src="legend/Supermarkten_9.png" /> Supermarkten': layer_Supermarkten_9,'<img src="legend/Apotheken_8.png" /> Apotheken': layer_Apotheken_8,'<img src="legend/Huisartsen_7.png" /> Huisartsen': layer_Huisartsen_7,'Dementie per wijk<br /><table><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_0100.png" /></td><td>0 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_10201.png" /></td><td>10 - 20</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_20302.png" /></td><td>20 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_30403.png" /></td><td>30 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_40504.png" /></td><td>40 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_501005.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_6_1006606.png" /></td><td>100 - 660</td></tr></table>': layer_Dementieperwijk_6,'Patienten Wijkverpleging per buurt<br /><table><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1321.png" /></td><td>1 - 32</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_32732.png" /></td><td>32 - 73</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_731343.png" /></td><td>73 - 134</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1341954.png" /></td><td>134 - 195</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_1952665.png" /></td><td>195 - 266</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_5_2663926.png" /></td><td>266 - 392</td></tr></table>': layer_PatientenWijkverplegingperbuurt_5,'Aantal voorzieningen<br /><table><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_32.png" /></td><td>3</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_3.png" /></td><td></td></tr></table>': layer_Aantalvoorzieningen_4,'SES-wijk FRL<br /><table><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_106801370.png" /></td><td>-1,068 - -0,137</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_013701.png" /></td><td>-0,137 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_002.png" /></td><td>0 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_000423.png" /></td><td>0 - 0,042</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_004201924.png" /></td><td>0,042 - 0,192</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_019203355.png" /></td><td>0,192 - 0,335</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_033507616.png" /></td><td>0,335 - 0,761</td></tr></table>': layer_SESwijkFRL_3,'Spreiding 65plus<br /><table><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_020.png" /></td><td>0 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_251.png" /></td><td>2 - 5</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_5102.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_10253.png" /></td><td>10 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_25604.png" /></td><td>25 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_601205.png" /></td><td>60 - 120</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_1203306.png" /></td><td>120 - 330</td></tr></table>': layer_Spreiding65plus_2,"Carto Light": layer_CartoLight_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/Ziekenhuizen_15.png" /> Ziekenhuizen': layer_Ziekenhuizen_15,'<img src="legend/Gecombineerdeverpleeginrichtingen_14.png" /> Gecombineerde verpleeginrichtingen': layer_Gecombineerdeverpleeginrichtingen_14,'<img src="legend/Verzorgingshuizen_13.png" /> Verzorgingshuizen': layer_Verzorgingshuizen_13,'<img src="legend/OverigezorgverlenersVektis_12.png" /> Overige zorgverleners (Vektis)': layer_OverigezorgverlenersVektis_12,'<img src="legend/MaatschappelijkVastgoedNEFRL_11.png" /> Maatschappelijk Vastgoed NE-FRL': layer_MaatschappelijkVastgoedNEFRL_11,'<img src="legend/Buurtcentranietcompleet_10.png" /> Buurtcentra (niet compleet)': layer_Buurtcentranietcompleet_10,'<img src="legend/Supermarkten_9.png" /> Supermarkten': layer_Supermarkten_9,'<img src="legend/Apotheken_8.png" /> Apotheken': layer_Apotheken_8,'<img src="legend/Huisartsen_7.png" /> Huisartsen': layer_Huisartsen_7,'Patienten Wijkverpleging per buurt<br /><table><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_010.png" /></td><td>0 - 1</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_1321.png" /></td><td>1 - 32</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_32732.png" /></td><td>32 - 73</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_731343.png" /></td><td>73 - 134</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_1341954.png" /></td><td>134 - 195</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_1952665.png" /></td><td>195 - 266</td></tr><tr><td style="text-align: center;"><img src="legend/PatientenWijkverplegingperbuurt_6_2663926.png" /></td><td>266 - 392</td></tr></table>': layer_PatientenWijkverplegingperbuurt_6,'Dementie per wijk<br /><table><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_0100.png" /></td><td>0 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_10201.png" /></td><td>10 - 20</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_20302.png" /></td><td>20 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_30403.png" /></td><td>30 - 40</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_40504.png" /></td><td>40 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_501005.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Dementieperwijk_5_1006606.png" /></td><td>100 - 660</td></tr></table>': layer_Dementieperwijk_5,'Aantal voorzieningen<br /><table><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_10.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_21.png" /></td><td>2</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_32.png" /></td><td>3</td></tr><tr><td style="text-align: center;"><img src="legend/Aantalvoorzieningen_4_3.png" /></td><td></td></tr></table>': layer_Aantalvoorzieningen_4,'SES-wijk FRL<br /><table><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_106801370.png" /></td><td>-1,068 - -0,137</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_013701.png" /></td><td>-0,137 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_002.png" /></td><td>0 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_000423.png" /></td><td>0 - 0,042</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_004201924.png" /></td><td>0,042 - 0,192</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_019203355.png" /></td><td>0,192 - 0,335</td></tr><tr><td style="text-align: center;"><img src="legend/SESwijkFRL_3_033507616.png" /></td><td>0,335 - 0,761</td></tr></table>': layer_SESwijkFRL_3,'Spreiding 65plus<br /><table><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_020.png" /></td><td>0 - 2</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_251.png" /></td><td>2 - 5</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_5102.png" /></td><td>5 - 10</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_10253.png" /></td><td>10 - 25</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_25604.png" /></td><td>25 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_601205.png" /></td><td>60 - 120</td></tr><tr><td style="text-align: center;"><img src="legend/Spreiding65plus_2_1203306.png" /></td><td>120 - 330</td></tr></table>': layer_Spreiding65plus_2,"Carto Light": layer_CartoLight_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
         setBounds();
         resetLabels([layer_Spreiding65plus_2]);
         map.on("zoomend", function(){
